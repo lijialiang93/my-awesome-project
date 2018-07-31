@@ -2,8 +2,8 @@ FROM node
 
 MAINTAINER Ryze <hz.bgning@gmail.com>
 
-
-WORKDIR /home/project
+COPY . /app
+WORKDIR /app
 
 EXPOSE 7001
 
