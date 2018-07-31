@@ -1,10 +1,7 @@
-FROM node
+FROM node:8.4
 
-MAINTAINER jl
-
-
-WORKDIR /home/project
+WORKDIR /app
 
 EXPOSE 7001
-
+RUN npm install --registry=https://registry.npm.taobao.org
 CMD ["npm","start"]
