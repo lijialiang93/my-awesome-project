@@ -1,5 +1,5 @@
 FROM node
-
+WORKDIR /home/project
 RUN npm install --registry=https://registry.npm.taobao.org
 EXPOSE 7001
 
