@@ -1,9 +1,9 @@
 FROM node
 
-COPY . /app
+COPY [".","/app"]
 WORKDIR /app
 
+RUN npm install --registry=https://registry.npm.taobao.org
 EXPOSE 7001
 
-RUN npm install --registry=https://registry.npm.taobao.org
 CMD ["npm","start"]
