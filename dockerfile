@@ -1,7 +1,10 @@
 FROM node
-RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
- RUN mkdir -p /home/project
-# COPY . /home/project
+
+MAINTAINER Ryze <hz.bgning@gmail.com>
+
+
 WORKDIR /home/project
-EXPOSE 7001
+
+EXPOSE 3000
+
 CMD ["npm","start"]
