@@ -6,11 +6,6 @@
 
 FROM node
 
-RUN apk --update add tzdata \
-    && cp /usr/share/zoneinfo/Asia/Guangzhou /etc/localtime \
-    && echo "Asia/Guangzhou" > /etc/timezone \
-    && apk del tzdata
-
 RUN mkdir -p /usr/src/app
 
 WORKDIR /usr/src/app
