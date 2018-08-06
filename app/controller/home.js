@@ -4,7 +4,7 @@ const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
   async index() {
-    this.ctx.body = 'testing...';
+    this.ctx.body = 'testing...!!';
   }
 }
 
