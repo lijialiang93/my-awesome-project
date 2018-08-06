@@ -1,4 +1,6 @@
 FROM node
-WORKDIR /home/project
+RUN mkdir -p /myapp
+RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
+WORKDIR /myapp
 EXPOSE 7001
 CMD ["npm","start"]
