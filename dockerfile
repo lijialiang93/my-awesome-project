@@ -7,11 +7,14 @@
 # CMD ["npm","start"]
 
 FROM node
-COPY ./package.json /tmp/package.json
-RUN cd /tmp && npm install --registry=https://registry.npm.taobao.org
-RUN mkdir /home/project  && cp -a /tmp/node_modules /home/project 
-WORKDIR /home/project 
+
+# install node modules
+RUN mkdir -p /home/project
+COPY package.json /home/project/package.json
+RUN  cd /home/project && npm install --registry=https://registry.npm.taobao.org
 COPY . /home/project 
+WORKDIR /home/project 
+ 
 EXPOSE 7001
 CMD ["npm","start"]
 
