@@ -7,10 +7,9 @@
 # CMD ["npm","start"]
 
 FROM node
-RUN mkdir -p /home/project
-RUN npm install -g yarn
-WORKDIR /home/project
+COPY . /app
+WORKDIR /app
+RUN npm install --registry=https://registry.npm.taobao.org
 EXPOSE 7001
-CMD ["npm","start"]
 
 
